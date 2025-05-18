@@ -350,4 +350,49 @@ footer {
         /* END FOOTER */
 
         /* UTILITY */
+@media (max-width: 800px) {
+    main {
+        margin-left: 0;
+        padding: 16px;
+        border-width: 2px;
+    }
+    .side-navbar {
+        position: static;
+        width: 100%;
+        top: 0;
+        left: 0;
+        padding-top: 0;
+        bottom: auto;
+        z-index: 1000;
+    }
+    .main-columns {
+        flex-direction: column;
+        gap: 24px;
+    }
+    .left-column,
+    .right-column {
+        width: 100%;
+        margin-left: 0;
+        padding-left: 0;
+    }
+    .profile-image {
+        float: none;
+        display: block;
+        margin: 0 auto 16px auto;
+        width: 80vw;
+        max-width: 300px;
+    }
+    .links {
+        position: static;
+        margin: 24px auto 0 auto;
+        display: flex;
+        justify-content: center;
+    }
+    h1 {
+        font-size: 2.5em;
+    }
+    h2 {
+        font-size: 1.5em;
+    }
+}
         /* END UTILITY */
