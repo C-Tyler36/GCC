@@ -65,15 +65,15 @@ h1 {
     color: #353132;
     font-family: 'OpenDyslexicB', Arial, Helvetica, sans-serif;
     font-weight: normal;
-    line-height: 32px;
-    font-size: 100px;
+    line-height: 2em;
+    font-size: 6.25em;
 }
 h2 {
     color: #353132;
     font-family: 'OpenDyslexicB', Arial, Helvetica, sans-serif;
     font-weight: normal;
-    line-height: 32px;
-    font-size: 48px;
+    line-height: 2em;
+    font-size: 3em;
     margin-bottom: 48px;
 }
 
@@ -81,16 +81,16 @@ h3, h4, h5, h6 {
     color: #353132;
     font-family: 'OpenDyslexicB', Arial, Helvetica, sans-serif;
     font-weight: normal;
-    line-height: 32px;
-    font-size: 18px;
+    line-height: 2em;
+    font-size: 1.125em;
 }
 /* paragraphs */
 p {
     color: #353132;
     font-family: 'OpenDyslexicR', Arial, Helvetica, sans-serif;
     font-weight: normal;
-    line-height: 32px;
-    font-size: 18px;
+    line-height: 2em;
+    font-size: 1.125em;
 }
 
 /* lists */
@@ -104,7 +104,7 @@ ul {
     list-style: disc;
     margin-left: 2em; /* Indent for bullets */
     padding-left: 0;
-    font-size: 24px;
+    font-size: 1.5em;
 }
 .bulleted-list li {
     margin-bottom: 12px; /* Increase space between list items */
@@ -186,13 +186,13 @@ summary {
 a {
     color: #353132;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 1.125em;
     font-family: 'OpenDyslexicB', Arial, Helvetica, sans-serif;
     text-transform: uppercase;
 }
 a:hover {
     color: #918f90;
-    font-size: 24px;
+    font-size: 1.5em;
 }
 
 .links {
@@ -219,13 +219,13 @@ a:hover {
         /* NAV BAR */
 .side-navbar {
     position: fixed;
-    top: 200px;
+    top: 0;
     left: 0;
     width: 200px;
-    bottom: 50px;
+    height: 100vh;
     overflow-y: auto;
     background: #f8a30d;
-    padding-top: 40px;
+    padding-top: 200px;
     z-index: 1000;
 }
 
@@ -282,6 +282,7 @@ header {
     height: 200px;
     min-height: 80px;
     position: relative;
+    z-index: 1100;
 }
 
 .logo {
@@ -324,6 +325,7 @@ footer {
     margin-top: auto;
     padding: 16px 0;
     height: 50px;
+    z-index: 1100;
 }
 
 .footer-container {
@@ -352,18 +354,8 @@ footer {
         /* UTILITY */
 @media (max-width: 800px) {
     main {
-        margin-left: 0;
         padding: 16px;
         border-width: 2px;
-    }
-    .side-navbar {
-        position: static;
-        width: 100%;
-        top: 0;
-        left: 0;
-        padding-top: 0;
-        bottom: auto;
-        z-index: 1000;
     }
     .main-columns {
         flex-direction: column;
@@ -394,5 +386,33 @@ footer {
     h2 {
         font-size: 1.5em;
     }
+    header {
+        flex-direction: column;
+        height: auto;
+        min-height: 0;
+        padding: 16px 0;
+        align-items: center;
+    }
+    .logo {
+        width: 100px;
+        height: 100px;
+        justify-content: center;
+        margin: 0 auto 8px auto;
+    }
+    .logo img {
+        width: 100px;
+        height: 100px;
+    }
+    .header-title {
+        position: static;
+        transform: none;
+        left: auto;
+        top: auto;
+        width: 100%;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+    }
 }
+
         /* END UTILITY */
