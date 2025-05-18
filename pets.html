@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pets</title>
+    <link rel="stylesheet" href="frame.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="pcis/GCClogo.png" alt="Logo">
+        </div>
+        <div class="header-title">
+            <h1>Pets</h1>
+        </div>
+    </header>
+
+
+<main>
+    <div id="nav-placeholder"></div>
+
+    <div class="main-columns">
+        <div class="left-column">
+            <section>
+                <details>
+                    <summary>Rats</summary>
+                    <ul>
+                        <li>Total of 9, had a max of 7 at one time.</li>
+                        <li>8 girls and 1 neuterd boy.</li>
+                        <li>Lovely pets, social and intelligent.</li>
+                        <li>Girls are much more energetic than the boys.</li>
+                        <li>Boys have a strong smell</li>
+                    </ul>
+                </details>
+            </section>
+        </div>
+        <div class="right-column">
+            <section>
+                <details>
+                    <summary>Hessi</summary>
+                    <ul>
+                        <li>Working line Springer Spaniel</li>
+                        <li>2 years old</li>
+                        <li>Very smart and too much energy!</li>
+                        <li>Spaniels get called 'velcro dogs' as they like to always be resting on someone when not running around.</li>
+                    </ul>
+                </details>
+            </section>
+        </div>
+    </div>
+    <div class="links">
+        <a href="about me.html">
+            <img src="pcis/arrow-right.png" alt="Next"/>
+        </a>
+    </div>
+</main>
+
+    <footer>
+        <hr class="s-line">
+        <hr class="b-line">
+        <div class="footer-container">
+
+            <div class="footer-copyright">
+                <p>&copy; 2025. C.T.Arascain.</p>
+            </div>
+
+
+        </div>
+
+    </footer>
+    <script src="JS/sidebar.js"></script>
+    <script>
+    fetch('navbar.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('nav-placeholder').innerHTML = data;
+        // Re-attach dropdown JS after loading nav
+        document.querySelectorAll('.dropdown-btn').forEach(btn => {
+          btn.addEventListener('click', function() {
+            this.parentElement.classList.toggle('open');
+          });
+        });
+      });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link rel="stylesheet" href="frame.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="pcis/GCClogo.png" alt="Logo">
+        </div>
+        <div class="header-title">
+            <h1>Me, Myself and I</h1>
+        </div>
+    </header>
+
+
+<main>
+    <div id="nav-placeholder"></div>
+        <img src="pcis/LinkPFP.png" alt="Charles" class="profile-image" />
+        <h2>Charles Tyler Arascain</h2>
+        <ul class="bulleted-list">
+            <li>35 years old</li>
+            <li>Born in England & moved to Scotland for university</li>
+            <li>BSc Applied Sport & Exercise Science</li>
+            <li>HND Coaching & Developing Sport</li>
+            <li>Previously worked as a Pupil Support Assistant and Hockey Coach</li>
+        </ul>
+    <div class="links">
+        <a href="hobbies.html">
+            <img src="pcis/arrow-right.png" alt="Next"/>
+        </a>
+    </div>
+</main>
+
+    <footer>
+        <hr class="s-line">
+        <hr class="b-line">
+        <div class="footer-container">
+
+            <div class="footer-copyright">
+                <p>&copy; 2025. C.T.Arascain.</p>
+            </div>
+
+
+        </div>
+
+    </footer>
+    <script src="JS/sidebar.js"></script>
+    <script>
+    fetch('navbar.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('nav-placeholder').innerHTML = data;
+        // Re-attach dropdown JS after loading nav
+        document.querySelectorAll('.dropdown-btn').forEach(btn => {
+          btn.addEventListener('click', function() {
+            this.parentElement.classList.toggle('open');
+          });
+        });
+      });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,197 @@
+    /* Font Imports / @font-face */
+@font-face {
+    font-family: 'OpenDyslexicR';
+    src: url('fonts/OpenDyslexic-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'OpenDyslexicBI';
+    src: url('fonts/OpenDyslexic-Bold-Italic.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'OpenDyslexicB';
+    src: url('fonts/OpenDyslexic-Bold.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'OpenDyslexicI';
+    src: url('fonts/OpenDyslexic-Italic.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*  Universal Selector - Reset all html elements to the following */
+* { 
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0;
+    border: 0;
+}
+
+/* set the html tag to max-width of the screen */
+html {
+    max-width: 100%;
+    font-family: 'OpenDyslexicB', Arial, Helvetica, sans-serif;
+}
+
+    /* Header Section */
+
+/* Style the header section */
+header {
+    background-color: #f8a30d;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 20px;
+}
+
+.header-title {
+    text-align: center;
+    flex: 1;
+}
+
+/* Set image width to 200px */
+.logo {
+    width: 200px;
+}
+
+.logo img {
+    width: 100%;
+    height: auto;
+    border: none;
+}
+
+/* Set the width of the navigation 100% of the remaining space */
+.header-nav {
+    min-width: 120px;      /* Ensures space for nav */
+    flex-shrink: 0;        /* Prevents nav from shrinking off screen */
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* Set the unorder list to display flex and change flow to horizontal */
+/* move the content to the end and set the gap between children to 20px */
+.header-ul {
+    display: flex;
+    justify-content: flex-end;
+    gap:20px;
+}
+
+/* Remove underline from links */
+a {
+    text-decoration: none;
+    color: #353132;
+    font-size: 18px;
+    font-family: 'OpenDyslexicB', Arial, Helvetica, sans-serif;
+}
+
+/* Pseuod-Class hover */
+a:hover {
+    color: #918f90;
+}
+
+/* remove bullet point */
+li {
+    list-style-type: none;
+}
+
+/* End of Header Section */
+
+
+    /* Global Section */
+main {
+    height: 100px;
+}
+
+
+/* Body Section */
+body {
+    background-color: #636061;
+    color: #353132;
+    line-height: 32px;
+    font-size: 18px;
+    font-family: 'OpenDyslexicR', Arial, Helvetica, sans-serif;
+}
+/* Headings */
+h1.header-title {
+    color: #353132;
+    font-family: 'OpenDyslexicB', Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    line-height: 32px;
+    font-size: 100px;
+}
+h2, h3, h4, h5, h6 {
+    color: #353132;
+    font-family: 'OpenDyslexicB', Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    line-height: 32px;
+    font-size: 18px;
+}
+
+/* Paragraphs */
+p {
+    color: #353132;
+    font-family: 'OpenDyslexicR', Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    line-height: 32px;
+    font-size: 18px;
+    margin: 0 0 20px 0;
+}
+
+
+    /* Footer Section */
+
+footer {
+    background-color:#f8a30d;
+    padding: 40px 0;
+    color: #353132;
+    line-height: 32px;
+    font-size: 18px;
+    font-family: 'OpenDyslexicR', Arial, Helvetica, sans-serif;
+}
+
+.footer-logo img {
+    width: 80px;
+    height: auto;
+    display: block;
+    margin-top: 10px;
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 60px;
+    padding: 20px 0;
+    width: 90%;
+    margin: 0 auto;
+}
+
+i {
+    font-size:30px;
+    padding: 20px 10px;
+}
+
+i:first-of-type {
+    padding-left: 0;
+}
+
+.s-line, .b-line {
+    background-color: #636061;
+    height: 1px;
+    margin: 10px auto;
+}
+
+.s-line {
+    width: 90%;
+}
+
+.b-line {
+    width: 92%;
+}
+

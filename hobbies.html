@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hobbies</title>
+    <link rel="stylesheet" href="frame.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="pcis/GCClogo.png" alt="Logo">
+        </div>
+        <div class="header-title">
+            <h1>Hobbies</h1>
+        </div>
+    </header>
+
+
+<main>
+    <div id="nav-placeholder"></div>
+
+    <div class="main-columns">
+        <div class="left-column">
+            <section>
+                <h2>Gaming</h2>
+                <details>
+                    <summary>1. Video Games</summary>
+                    <ul>
+                        <li>Rocket League</li>
+                        <li>Overwatch</li>
+                        <li>Stardew Valley</li>
+                    </ul>
+                </details>
+                <details>
+                    <summary>2. Board Games</summary>
+                    <ul>
+                        <li>Worker placement. eg. Caverna </li>
+                        <li>Story based. eg. Gloom</li>
+                    </ul>
+                </details>
+                <details>
+                    <summary>3. TTRPGs</summary>
+                    <ul>
+                        <li>Dungeons & Dragons</li>
+                        <li>Pathfinder</li>
+                        <li>Rogue Trader</li>
+                    </ul>
+                </details>
+            </section>
+        </div>
+        <div class="right-column">
+            <section>
+                <h2>Arts & Craft</h2>
+                <details>
+                    <summary>1. Canvas work</summary>
+                    <ul>
+                        <li>Acrylic pouring</li>
+                        <li>Découpage</li>
+                    </ul>
+                </details>
+                <details>
+                    <summary>2. Miniatures</summary>
+                    <ul>
+                        <li>Warhammer 40k & AoS</li>
+                        <li>Other</li>
+                    </ul>
+                </details>
+                <details>
+                    <summary>3. Terrain building</summary>
+                    <ul>
+                        <li>put stuff here</li>
+                    </ul>
+                </details>
+            </section>
+        </div>
+    </div>
+    <div class="links">
+        <a href="sport.html">
+            <img src="pcis/arrow-right.png" alt="Next"/>
+        </a>
+    </div>
+</main>
+
+    <footer>
+        <hr class="s-line">
+        <hr class="b-line">
+        <div class="footer-container">
+
+            <div class="footer-copyright">
+                <p>&copy; 2025. C.T.Arascain.</p>
+            </div>
+
+
+        </div>
+
+    </footer>
+    <script src="JS/sidebar.js"></script>
+    <script>
+    fetch('navbar.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('nav-placeholder').innerHTML = data;
+        // Re-attach dropdown JS after loading nav
+        document.querySelectorAll('.dropdown-btn').forEach(btn => {
+          btn.addEventListener('click', function() {
+            this.parentElement.classList.toggle('open');
+          });
+        });
+      });
+    </script>
+
+</body>
+</html>
